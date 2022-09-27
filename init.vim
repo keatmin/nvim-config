@@ -105,7 +105,7 @@ nmap <leader>r :so ~/.config/nvim/init.vim<CR>
 
 " Terminal mapping
 tmap <ESC> <C-\><C-n>
-ervers
+
 " Remap NerdTree
 nmap <C-n> :NERDTreeToggle<CR>
 
