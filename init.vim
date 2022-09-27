@@ -135,5 +135,3 @@ nmap <silent> <leader>d <Plug>(pydocstring)
 " Fugitive mapping
 nmap <leader>gd :Gdiffsplit<CR>
 
-" Enable plugin indentation
-filetype plugin indent on
