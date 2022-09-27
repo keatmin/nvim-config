@@ -1,4 +1,4 @@
-
+require("lsp-format").setup {}
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap=true, silent=true }
 vim.api.nvim_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
@@ -9,6 +9,7 @@ vim.api.nvim_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<C
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
+    require("lsp-format").on_attach(client)
     -- Enable completion triggered by <c-x><c-o>
     vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
     -- Mappings.
@@ -29,11 +30,10 @@ local on_attach = function(client, bufnr)
 end
 
 -- Update nvim-cmp capabilities and add them to each language server
-require("lsp-format").setup {}
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 for _, lsp in ipairs(servers) do
 require('lspconfig')[lsp].setup {
-    on_attach = require('lsp-format').on_attach,
+    on_attach = on_attach,
     capabilities = capabilites,
     flags = {
 	debounce_text_change=150
