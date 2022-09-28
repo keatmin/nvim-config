@@ -103,6 +103,9 @@ nmap <leader>ecs :sp ~/.config/nvim/init.vim<CR>
 " Refresh config
 nmap <leader>r :so ~/.config/nvim/init.vim<CR>
 
+" cd to current Buffers
+nmap <leader>cd :cd %:p:h<CR>:pwd<CR>
+
 " Terminal mapping
 tmap <ESC> <C-\><C-n>
 
