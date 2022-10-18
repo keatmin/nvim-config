@@ -47,6 +47,9 @@ Plug 'lukas-reineke/lsp-format.nvim'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
+" Snippet
+Plug 'rafamadriz/friendly-snippets'
+
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
