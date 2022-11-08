@@ -87,12 +87,17 @@ require("mason-lspconfig").setup()
 require('lsp-config')
 require('cmp-config')
 require('nullls-config')
-require('nvim-tree').setup()
+require('nvim-tree').setup({
+    disable_netrw = true,
+    open_on_setup = true,
+    filters = {
+        custom = {".git"}}
+})
 EOF
 
 " To start nerd tree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NvimTree | endif
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NvimTreeOpen | endif
 
 " Remap navigation for splits
 nnoremap <C-J> <C-W><C-J>
@@ -146,3 +151,5 @@ nmap <silent> <leader>d <Plug>(pydocstring)
 " Fugitive mapping
 nmap <leader>gd :Gdiffsplit<CR>
 
+let g:loaded_netrw = 1
+let g:loaded_netrwPlugin = 1
