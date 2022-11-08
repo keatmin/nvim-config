@@ -12,6 +12,7 @@ Plug 'tpope/vim-commentary'
 
 " For text highlighting 
 Plug 'joshdick/onedark.vim'
+Plug 'EdenEast/nightfox.nvim'
 " Git 
 Plug 'tpope/vim-fugitive'
 
@@ -117,10 +118,10 @@ nmap <C-n> :NERDTreeToggle<CR>
 
 " lightline
 let g:lightline = {
-      \ 'colorscheme': 'onedark',
+      \ 'colorscheme': 'carbonfox',
       \ }
 " theme
-colorscheme onedark
+colorscheme carbonfox
 
 "fzf 
 set rtp+=/usr/local/opt/fzf
