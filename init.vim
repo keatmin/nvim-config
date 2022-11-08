@@ -5,7 +5,10 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " File explorer
-Plug 'preservim/nerdtree'
+" Plug 'preservim/nerdtree'
+" Neovim file explorer 
+Plug 'nvim-tree/nvim-web-devicons' " optional, for file icons
+Plug 'nvim-tree/nvim-tree.lua'
 
 " Commenting
 Plug 'tpope/vim-commentary'
@@ -84,11 +87,12 @@ require("mason-lspconfig").setup()
 require('lsp-config')
 require('cmp-config')
 require('nullls-config')
+require('nvim-tree').setup()
 EOF
 
 " To start nerd tree
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NvimTree | endif
 
 " Remap navigation for splits
 nnoremap <C-J> <C-W><C-J>
@@ -114,7 +118,7 @@ nmap <leader>cd :cd %:p:h<CR>:pwd<CR>
 tmap <ESC> <C-\><C-n>
 
 " Remap NerdTree
-nmap <C-n> :NERDTreeToggle<CR>
+nmap <C-n> :NvimTreeToggle<CR>
 
 " lightline
 let g:lightline = {
