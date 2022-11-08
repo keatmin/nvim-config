@@ -8,6 +8,7 @@ require('nvim-treesitter.configs').setup {
         'yaml',
         'json',
         'sql',
+        'lua',
         'bash'
     },
     sync_install = false,
