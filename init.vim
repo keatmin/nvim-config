@@ -16,6 +16,7 @@ Plug 'tpope/vim-commentary'
 " For text highlighting 
 Plug 'joshdick/onedark.vim'
 Plug 'EdenEast/nightfox.nvim'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 " Git 
 Plug 'tpope/vim-fugitive'
 
@@ -73,6 +74,9 @@ set hlsearch
 set nobackup
 set nowritebackup
 
+let g:loaded_netrw = 1
+let g:loaded_netrwPlugin = 1
+
 lua << EOF
 servers = {
     'pyright',
@@ -89,6 +93,7 @@ require('cmp-config')
 require('nullls-config')
 require('nvim-tree').setup({
     disable_netrw = true,
+    sync_root_with_cwd = true,
     open_on_setup = true,
     filters = {
         custom = {".git"}}
@@ -127,10 +132,10 @@ nmap <C-n> :NvimTreeToggle<CR>
 
 " lightline
 let g:lightline = {
-      \ 'colorscheme': 'carbonfox',
+      \ 'colorscheme': 'tokyonight-moon',
       \ }
 " theme
-colorscheme carbonfox
+colorscheme tokyonight-moon
 
 "fzf 
 set rtp+=/usr/local/opt/fzf
@@ -150,6 +155,3 @@ nmap <silent> <leader>d <Plug>(pydocstring)
 
 " Fugitive mapping
 nmap <leader>gd :Gdiffsplit<CR>
-
-let g:loaded_netrw = 1
-let g:loaded_netrwPlugin = 1
