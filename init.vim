@@ -69,34 +69,8 @@ require("mason-lspconfig").setup()
 require('lsp-config')
 require('cmp-config')
 require('nullls-config')
-require('nvim-tree').setup({
-    disable_netrw = true,
-    sync_root_with_cwd = true,
-    open_on_setup = true,
-})
+require('nvim-tree-config')
 EOF
-
-" To start nerd tree
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NvimTreeOpen | endif
-"
-nmap <leader>$s <C-w>s<C-w>j:terminal<CR>:set nonumber<CR><S-a>
-nmap <leader>$v <C-w>v<C-w>l:terminal<CR>:set nonumber<CR><S-a>
-
-" edit config
-nmap <leader>ecv :vs ~/.config/nvim/init.vim<CR>
-nmap <leader>ecs :sp ~/.config/nvim/init.vim<CR>
-" Refresh config
-nmap <leader>r :so ~/.config/nvim/init.vim<CR>
-
-" cd to current Buffers
-nmap <leader>cd :cd %:p:h<CR>:pwd<CR>
-
-" Terminal mapping
-tmap <ESC> <C-\><C-n>
-
-" Remap NerdTree
-nmap <C-n> :NvimTreeToggle<CR>
 
 " lightline
 let g:lightline = {
