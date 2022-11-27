@@ -1,8 +1,8 @@
 call plug#begin()
 
 Plug 'itchyny/lightline.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+" Plug 'junegunn/fzf.vim'
 
 " File explorer
 " Plug 'preservim/nerdtree'
@@ -83,15 +83,6 @@ let g:lightline = {
       \ }
 " theme
 colorscheme tokyonight-moon
-
-"fzf 
-set rtp+=/usr/local/opt/fzf
-nnoremap <C-P> :GFiles<Cr>
-nnoremap <leader>f :Files <Cr>
-nnoremap <leader>b :BLines <Cr>
-nnoremap <leader><CR> :Files ~/Projects<Cr>
-nnoremap <C-g> :Rg<Cr>
-nnoremap <leader><tab> :Buffers<Cr>
 
 " Markdown highlighting
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'javascript', 'sql', 'json', 'go']
