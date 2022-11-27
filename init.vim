@@ -68,6 +68,7 @@ lua << EOF
 require('configs')
 require('mappings')
 require('themes')
+require('fugitive-mapping')
 require('treesitter-config')
 require("mason").setup()
 require("mason-lspconfig").setup()
@@ -86,5 +87,3 @@ let g:pydocstring_doq_path = '/Users/keat/.local/bin/doq'
 let g:pydocstring_formatter = 'numpy'
 nmap <silent> <leader>pd <Plug>(pydocstring)
 
-" Fugitive mapping
-nmap <leader>gd :Gdiffsplit<CR>
