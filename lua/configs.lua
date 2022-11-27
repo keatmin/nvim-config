@@ -15,6 +15,7 @@ set.laststatus=2
 -- To not deal with 
 set.backup=false
 set.writebackup=false
+set.swapfile=false
 
 -- Disable loading netrw by default 
 g.loaded_netrw=1
