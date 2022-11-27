@@ -13,6 +13,10 @@ Plug 'nvim-tree/nvim-tree.lua'
 " Commenting
 Plug 'tpope/vim-commentary'
 
+" Telescope
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+
 " For text highlighting 
 Plug 'joshdick/onedark.vim'
 Plug 'EdenEast/nightfox.nvim'
@@ -70,6 +74,7 @@ require('lsp-config')
 require('cmp-config')
 require('nullls-config')
 require('nvim-tree-config')
+require('telescope-config')
 EOF
 
 " lightline
