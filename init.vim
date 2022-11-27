@@ -73,23 +73,13 @@ require('nvim-tree').setup({
     disable_netrw = true,
     sync_root_with_cwd = true,
     open_on_setup = true,
-    filters = {
-        custom = {".git"}}
 })
 EOF
 
 " To start nerd tree
 " autocmd StdinReadPre * let s:std_in=1
 " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NvimTreeOpen | endif
-
-" Remap navigation for splits
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
-" Leader remap
-let mapleader=","
+"
 nmap <leader>$s <C-w>s<C-w>j:terminal<CR>:set nonumber<CR><S-a>
 nmap <leader>$v <C-w>v<C-w>l:terminal<CR>:set nonumber<CR><S-a>
 
