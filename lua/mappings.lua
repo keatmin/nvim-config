@@ -12,12 +12,12 @@ vim.keymap.set('n', '<leader>$v', '<C-w>s<C-w>l:terminal<cr>:set nonumber<CR><S-
 vim.keymap.set('t', '<ESC>', '<C-\\><C-n>')
 
 -- refresh vim config
-vim.keymap.set('n', '<leader>r', ':so ~/.config/nvim/init.vim')
+vim.keymap.set('n', '<leader>r', ':so ~/.config/nvim/init.vim<CR>')
 
 -- edit init.vim config 
-vim.keymap.set('n', '<leader>ecs', ':sp ~/.config/nvim/init.vim<cr>')
-vim.keymap.set('n', '<leader>ecv', ':vs ~/.config/nvim/init.vim<cr>')
+vim.keymap.set('n', '<leader>ecs', ':sp ~/.config/nvim/init.vim<CR>')
+vim.keymap.set('n', '<leader>ecv', ':vs ~/.config/nvim/init.vim<CR>')
 
 -- cd to current buffer
-vim.keymap.set('n', '<leader>ecv', ':cd %:p:h<CR>:pwd<CR>')
+vim.keymap.set('n', '<leader>cd', ':cd %:p:h<CR>:pwd<CR>')
 
