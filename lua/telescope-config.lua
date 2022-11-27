@@ -1,5 +1,12 @@
 local builtin = require('telescope.builtin')
 require('telescope').setup {
+  defaults = {
+        layout_strategy = 'horizontal',
+        layout_config = {
+            width = 0.8,
+            height = 0.8
+        }
+    },
   extensions = {
     fzf = {
       fuzzy = true,                    -- false will only do exact matching
@@ -24,4 +31,4 @@ vim.keymap.set('n', '<leader>fb', builtin.current_buffer_fuzzy_find)
 vim.keymap.set('n', '<leader>fa',builtin.diagnostics)
 vim.keymap.set('n', '<leader>fr',builtin.lsp_references)
 vim.keymap.set('n', '<leader>fd',builtin.lsp_definitions)
--- vim.keymap.set('n', '<leader><CR>',builtin.find_files)
+vim.keymap.set('n', '<leader><CR>',function() builtin.find_files({cwd='~/Projects'}) end)
