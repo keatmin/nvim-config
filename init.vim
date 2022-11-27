@@ -67,6 +67,7 @@ call plug#end()
 lua << EOF
 require('configs')
 require('mappings')
+require('themes')
 require('treesitter-config')
 require("mason").setup()
 require("mason-lspconfig").setup()
@@ -77,20 +78,13 @@ require('nvim-tree-config')
 require('telescope-config')
 EOF
 
-" lightline
-let g:lightline = {
-      \ 'colorscheme': 'tokyonight-moon',
-      \ }
-" theme
-colorscheme tokyonight-moon
-
 " Markdown highlighting
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'javascript', 'sql', 'json', 'go']
 
 " Pydocstring
 let g:pydocstring_doq_path = '/Users/keat/.local/bin/doq'
 let g:pydocstring_formatter = 'numpy'
-nmap <silent> <leader>d <Plug>(pydocstring)
+nmap <silent> <leader>pd <Plug>(pydocstring)
 
 " Fugitive mapping
 nmap <leader>gd :Gdiffsplit<CR>
