@@ -15,6 +15,7 @@ vim.keymap.set('t', '<ESC>', '<C-\\><C-n>')
 vim.keymap.set('n', '<leader>r', ':so ~/.config/nvim/init.vim<CR>')
 
 -- edit init.vim config 
+vim.keymap.set('n', '<leader>ec', ':vi ~/.config/nvim/init.vim<CR>')
 vim.keymap.set('n', '<leader>ecs', ':sp ~/.config/nvim/init.vim<CR>')
 vim.keymap.set('n', '<leader>ecv', ':vs ~/.config/nvim/init.vim<CR>')
 
