@@ -60,31 +60,9 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
 
-syntax on
-set laststatus=2
-
-" Set number and relative number
-set number relativenumber 
-
-set shiftwidth=4 tabstop=4 expandtab smartindent
-" case matching
-set smartcase ignorecase " Set highlightsearch auto
-set hlsearch
-
-set nobackup
-set nowritebackup
-
-let g:loaded_netrw = 1
-let g:loaded_netrwPlugin = 1
-
 lua << EOF
-servers = {
-    'pyright',
-    'terraformls',
-    'tflint',
-    'tsserver',
-    'gopls'
-}
+require('configs')
+require('mappings')
 require('treesitter-config')
 require("mason").setup()
 require("mason-lspconfig").setup()
@@ -140,7 +118,8 @@ colorscheme tokyonight-moon
 "fzf 
 set rtp+=/usr/local/opt/fzf
 nnoremap <C-P> :GFiles<Cr>
-nnoremap <C-m> :Files <Cr>
+nnoremap <leader>f :Files <Cr>
+nnoremap <leader>b :BLines <Cr>
 nnoremap <leader><CR> :Files ~/Projects<Cr>
 nnoremap <C-g> :Rg<Cr>
 nnoremap <leader><tab> :Buffers<Cr>
