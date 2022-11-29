@@ -4,8 +4,9 @@ require('telescope').setup {
         layout_strategy = 'horizontal',
         layout_config = {
             width = 0.8,
-            height = 0.8
-        }
+            height = 0.9
+        },
+        winblend = 25
     },
   extensions = {
     fzf = {
@@ -15,7 +16,27 @@ require('telescope').setup {
       case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
                                        -- the default case_mode is "smart_case"
     }
-  }
+  },
+    pickers = {
+      find_files = {
+            theme = "dropdown",
+        },
+        grep_string = {
+            theme = "cursor",
+            winblend = 15
+        },
+        buffers = {
+            theme = "ivy",
+            winblend = 25
+        },
+        diagnostics = {
+            theme = "ivy",
+            layout_config = {
+            preview_width = 0.5
+            }
+        }
+
+    }
 }
 -- To get fzf loaded and working with telescope, you need to call
 -- load_extension, somewhere after setup function:
