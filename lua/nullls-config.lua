@@ -6,7 +6,9 @@ local sources = {
     null_ls.builtins.diagnostics.flake8.with({
         extra_args = {"--max-line-length", 88}
     }),
-    null_ls.builtins.diagnostics.pylint,
+    null_ls.builtins.diagnostics.pylint.with({
+        prefer_local = ".venv/bin",
+    }),
     null_ls.builtins.formatting.black,
     null_ls.builtins.formatting.reorder_python_imports,
     null_ls.builtins.formatting.terraform_fmt,
