@@ -69,14 +69,14 @@ require('configs')
 require('mappings')
 require('themes')
 require('fugitive-mapping')
+require('telescope-config')
 require('treesitter-config')
+require('nvim-tree-config')
 require("mason").setup()
 require("mason-lspconfig").setup()
 require('lsp-config')
 require('cmp-config')
 require('nullls-config')
-require('nvim-tree-config')
-require('telescope-config')
 EOF
 
 " Markdown highlighting

@@ -21,4 +21,5 @@ local sources = {
     null_ls.builtins.diagnostics.yamllint
     }
 
-null_ls.setup({ sources = sources, on_attach=lsp_format.on_attach })
+null_ls.setup({ diagnostics_format = "[#{c}] #{m} (#{s})",sources = sources, on_attach=lsp_format.on_attach, debug=true })
+

@@ -9,7 +9,6 @@ vim.api.nvim_set_keymap('n', '<space>q', '<cmd>lua vim.diagnostic.setloclist()<C
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local servers = {
-    'pyright',
     'terraformls',
     'tflint',
     'tsserver',
@@ -38,13 +37,30 @@ end
 
 -- Update nvim-cmp capabilities and add them to each language server
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
-for _, lsp in ipairs(servers) do
-require('lspconfig')[lsp].setup {
+local default_config = {
     on_attach = on_attach,
     capabilities = capabilites,
     flags = {
 	debounce_text_change=150
     }
 }
-end
+
+for _, lsp in ipairs(servers) do
+require('lspconfig')[lsp].setup(default_config) end
+require('lspconfig')['pyright'].setup {
+    on_attach = on_attach,
+    capabilities = capabilites,
+    flags = {
+	debounce_text_change=150
+    },
+    root_dir = require('lspconfig').util.root_pattern('pyproject.toml', 'requirements.txt', '.venv'),
+    pyright = {
+            useLibraryCodeForTypes = true
+    },
+    python = {
+        analysis = {
+            autoSearchPaths = true
+        }
+    }
+}
 
