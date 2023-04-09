@@ -20,6 +20,7 @@ require('telescope').setup {
     pickers = {
       find_files = {
             theme = "dropdown",
+            hidden = true
         },
         grep_string = {
             theme = "cursor",
