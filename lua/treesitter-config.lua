@@ -9,6 +9,7 @@ require("nvim-treesitter.configs").setup({
 		"json",
 		"lua",
 		"bash",
+        "sql"
 	},
 	sync_install = false,
 	auto_install = true,
