@@ -14,6 +14,7 @@ local servers = {
 	"tsserver",
 	"gopls",
 	"ltex",
+    "marksman"
 }
 local on_attach = function(client, bufnr)
 	require("lsp-format").on_attach(client)

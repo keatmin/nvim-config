@@ -15,7 +15,9 @@ Plug 'tpope/vim-commentary'
 
 " Telescope
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'arch -arm64 make' }
+" If non-m1
+" Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
 " For text highlighting 
 Plug 'joshdick/onedark.vim'
