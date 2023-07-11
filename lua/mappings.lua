@@ -24,3 +24,7 @@ vim.keymap.set("n", "<leader>cd", ":cd %:p:h<CR>:pwd<CR>")
 
 -- cd to current buffer
 vim.keymap.set("n", "<leader>bd", ":bd <CR>")
+
+-- open link under cursor
+vim.keymap.set("n", "<leader>gx", "[[:execute '!open ' . shellescape(expand('<cfile>'), 1)<CR>]]")
+vim.keymap.set("n", "<leader>gh", ":!open https://github.com/")
