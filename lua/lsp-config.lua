@@ -1,6 +1,14 @@
 require("lsp-format").setup({})
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap = true, silent = true }
+vim.diagnostic.config({
+	virtual_text = {
+		source = "if_many",
+		format = function(diagnostic)
+			return string.format("[%s] %s", diagnostic.source, diagnostic.message)
+		end,
+	},
+})
 vim.api.nvim_set_keymap("n", "<space>e", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 vim.api.nvim_set_keymap("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
 vim.api.nvim_set_keymap("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
