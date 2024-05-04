@@ -14,30 +14,30 @@ Plug 'nvim-tree/nvim-tree.lua'
 Plug 'tpope/vim-commentary'
 
 " Telescope
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' }
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'arch -arm64 make' }
 " If non-m1
 " Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
-" For text highlighting 
+" For text highlighting
 Plug 'joshdick/onedark.vim'
 Plug 'EdenEast/nightfox.nvim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
-" Git 
+" Git
 Plug 'tpope/vim-fugitive'
 
 " Surround
 Plug 'tpope/vim-surround'
 
 " Python
-Plug 'heavenshell/vim-pydocstring' 
+Plug 'heavenshell/vim-pydocstring'
 
 " Markdown Preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
-" Neovim treesitter 
+" Neovim treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Neovim lsp
