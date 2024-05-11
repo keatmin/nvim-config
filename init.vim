@@ -48,8 +48,6 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'lukas-reineke/lsp-format.nvim'
-" Plug '~/Projects/personal/ale'
-" Plug 'dense-analysis/ale'
 
 " For vsnip
 Plug 'hrsh7th/cmp-vsnip'
@@ -78,8 +76,6 @@ require('lsp-config')
 require('cmp-config')
 require('nullls-config')
 EOF
-
-" require('ale-config')
 
 " Markdown highlighting
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'javascript', 'sql', 'json', 'go']
