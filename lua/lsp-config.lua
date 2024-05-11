@@ -22,7 +22,8 @@ local servers = {
 	"tsserver",
 	"gopls",
 	"ltex",
-    "marksman"
+	"marksman",
+	"ruff_lsp",
 }
 local on_attach = function(client, bufnr)
 	require("lsp-format").on_attach(client)
@@ -71,12 +72,9 @@ require("lspconfig")["pyright"].setup({
 		debounce_text_change = 150,
 	},
 	root_dir = require("lspconfig").util.root_pattern("pyproject.toml", "requirements.txt", ".venv"),
-	pyright = {
-		useLibraryCodeForTypes = true,
-	},
-	python = {
-		analysis = {
-			autoSearchPaths = true,
+	settings = {
+		python = {
+			venvPath = ".venv",
 		},
 	},
 })

@@ -1,12 +1,8 @@
 call plug#begin()
 
-Plug 'itchyny/lightline.vim'
-" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-" Plug 'junegunn/fzf.vim'
+Plug 'nvim-lualine/lualine.nvim'
 
-" File explorer
-" Plug 'preservim/nerdtree'
-" Neovim file explorer 
+" Neovim file explorer
 Plug 'nvim-tree/nvim-web-devicons' " optional, for file icons
 Plug 'nvim-tree/nvim-tree.lua'
 
@@ -20,9 +16,6 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'arch -arm64 make' }
 " Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
 " For text highlighting
-Plug 'joshdick/onedark.vim'
-Plug 'EdenEast/nightfox.nvim'
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 " Git
@@ -51,12 +44,14 @@ Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 
-" neovim formatter 
+" neovim formatter
 Plug 'nvim-lua/plenary.nvim'
 Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'lukas-reineke/lsp-format.nvim'
+" Plug '~/Projects/personal/ale'
+" Plug 'dense-analysis/ale'
 
-" For vsnip 
+" For vsnip
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
@@ -72,6 +67,7 @@ lua << EOF
 require('configs')
 require('mappings')
 require('themes')
+require('lualine-config')
 require('fugitive-mapping')
 require('telescope-config')
 require('treesitter-config')
@@ -83,6 +79,8 @@ require('cmp-config')
 require('nullls-config')
 EOF
 
+" require('ale-config')
+
 " Markdown highlighting
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'javascript', 'sql', 'json', 'go']
 
@@ -90,4 +88,3 @@ let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'javascript', 's
 let g:pydocstring_doq_path = '/Users/keat/.local/bin/doq'
 let g:pydocstring_formatter = 'numpy'
 nmap <silent> <leader>pd <Plug>(pydocstring)
-

@@ -5,3 +5,4 @@ require("nvim-tree").setup({
 
 -- Set mapping to use <C-N>
 vim.keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>", { silent = true })
+require("nvim-web-devicons").get_icons()
