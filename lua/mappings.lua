@@ -22,7 +22,7 @@ vim.keymap.set("n", "<leader>ecv", ":vs ~/.config/nvim/init.vim<CR>")
 -- cd to current buffer
 vim.keymap.set("n", "<leader>cd", ":cd %:p:h<CR>:pwd<CR>")
 
--- cd to current buffer
+-- delete buffer
 vim.keymap.set("n", "<leader>bd", ":bd <CR>")
 
 -- open link under cursor
