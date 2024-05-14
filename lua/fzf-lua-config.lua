@@ -29,4 +29,7 @@ vim.keymap.set("n", "<leader>fc", "<cmd>lua require('fzf-lua').grep_cword()<CR>"
 vim.keymap.set("n", "<leader><tab>", "<cmd>lua require('fzf-lua').buffers({header=false})<CR>", { silent = true })
 vim.keymap.set("n", "<leader>fb", "<cmd>lua require('fzf-lua').blines()<CR>", { silent = true })
 vim.keymap.set("n", "<leader>fm", "<cmd>lua require('fzf-lua').marks()<CR>", { silent = true })
-vim.keymap.set("n", "<leader>fm", "<cmd>lua require('fzf-lua').marks()<CR>", { silent = true })
+vim.keymap.set("n", "<leader>fa", "<cmd>lua require('fzf-lua').diagnostics()<CR>", { silent = true })
+vim.keymap.set("n", "<leader>fr", "<cmd>lua require('fzf-lua').lsp_references()<CR>", { silent = true })
+vim.keymap.set("n", "<leader>fd", "<cmd>lua require('fzf-lua').lsp_definitions()<CR>", { silent = true })
+vim.keymap.set("n", "<leader>fp", "<cmd>lua require('fzf-lua').registers()<CR>", { silent = true })
