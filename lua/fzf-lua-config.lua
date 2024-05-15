@@ -25,7 +25,7 @@ vim.keymap.set(
 	{ silent = true }
 )
 vim.keymap.set("n", "<leader>fg", "<cmd>lua require('fzf-lua').live_grep_glob({header=false})<CR>", { silent = true })
-vim.keymap.set("n", "<leader>fc", "<cmd>lua require('fzf-lua').grep_cword()<CR>", { silent = true })
+vim.keymap.set("n", "<leader>fc", "<cmd>lua require('fzf-lua').grep_cword({ header=false })<CR>", { silent = true })
 vim.keymap.set(
 	"n",
 	"<leader><tab>",
