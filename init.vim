@@ -10,11 +10,6 @@ Plug 'nvim-tree/nvim-tree.lua'
 Plug 'tpope/vim-commentary'
 
 Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
-" Telescope
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' }
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'arch -arm64 make' }
-" If non-m1
-" Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
 " For text highlighting
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
@@ -69,7 +64,6 @@ require('themes')
 require('lualine-config')
 require('fugitive-mapping')
 require('fzf-lua-config')
-require('telescope-config')
 require('treesitter-config')
 require('nvim-tree-config')
 require("mason").setup()
