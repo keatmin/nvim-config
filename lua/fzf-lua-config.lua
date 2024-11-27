@@ -38,3 +38,4 @@ vim.keymap.set("n", "<leader>fa", "<cmd>lua require('fzf-lua').diagnostics()<CR>
 vim.keymap.set("n", "<leader>fr", "<cmd>lua require('fzf-lua').lsp_references()<CR>", { silent = true })
 vim.keymap.set("n", "<leader>fd", "<cmd>lua require('fzf-lua').lsp_definitions()<CR>", { silent = true })
 vim.keymap.set("n", "<leader>fp", "<cmd>lua require('fzf-lua').registers()<CR>", { silent = true })
+vim.keymap.set("n", "<leader>fgr", "<cmd>lua require('fzf-lua').resume()<CR>", { silent = true })
