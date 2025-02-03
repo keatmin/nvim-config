@@ -27,4 +27,4 @@ vim.keymap.set("n", "<leader>bd", ":bd <CR>")
 
 -- open link under cursor
 vim.keymap.set("n", "<leader>gx", "[[:execute '!open ' . shellescape(expand('<cfile>'), 1)<CR>]]")
-vim.keymap.set("n", "<leader>gh", ":!open https://github.com/")
+vim.keymap.set({ "n", "v" }, "<leader>gh", ":GBrowse <CR>")

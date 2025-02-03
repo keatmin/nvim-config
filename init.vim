@@ -16,6 +16,7 @@ Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 " Git
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 
 " Surround
 Plug 'tpope/vim-surround'
