@@ -56,6 +56,8 @@ Plug 'rafamadriz/friendly-snippets'
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+Plug 'stevearc/oil.nvim'
+
 call plug#end()
 
 lua << EOF
@@ -66,6 +68,7 @@ require('lualine-config')
 require('fugitive-mapping')
 require('fzf-lua-config')
 require('treesitter-config')
+require("oil").setup()
 require('nvim-tree-config')
 require("mason").setup()
 require("mason-lspconfig").setup()
