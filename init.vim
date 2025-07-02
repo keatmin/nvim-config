@@ -43,7 +43,8 @@ Plug 'hrsh7th/nvim-cmp'
 
 " neovim formatter
 Plug 'nvim-lua/plenary.nvim'
-Plug 'jose-elias-alvarez/null-ls.nvim'
+" Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'nvimtools/none-ls.nvim'
 Plug 'lukas-reineke/lsp-format.nvim'
 
 " For vsnip
@@ -58,6 +59,12 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 Plug 'stevearc/oil.nvim'
 
+" 
+Plug 'stevearc/dressing.nvim'
+Plug 'MunifTanjim/nui.nvim'
+Plug 'MeanderingProgrammer/render-markdown.nvim'
+Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
+
 call plug#end()
 
 lua << EOF
@@ -70,11 +77,12 @@ require('fzf-lua-config')
 require('treesitter-config')
 require("oil").setup()
 require('nvim-tree-config')
-require("mason").setup()
-require("mason-lspconfig").setup()
+require('mason').setup()
+require('mason-lspconfig').setup()
 require('lsp-config')
 require('cmp-config')
 require('nullls-config')
+require('avante-config')
 EOF
 
 " Markdown highlighting
@@ -84,3 +92,5 @@ let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'javascript', 's
 let g:pydocstring_doq_path = '/Users/keat/.local/bin/doq'
 let g:pydocstring_formatter = 'numpy'
 nmap <silent> <leader>pd <Plug>(pydocstring)
+
+

@@ -19,11 +19,12 @@ vim.api.nvim_set_keymap("n", "<space>q", "<cmd>lua vim.diagnostic.setloclist()<C
 local servers = {
 	"terraformls",
 	"tflint",
-	"tsserver",
+	"ts_ls",
 	"gopls",
 	"ltex",
 	"marksman",
-	"ruff_lsp",
+	"ruff",
+	"solargraph",
 }
 local on_attach = function(client, bufnr)
 	require("lsp-format").on_attach(client)
