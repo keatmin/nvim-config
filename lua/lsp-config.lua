@@ -64,9 +64,9 @@ local default_config = {
 }
 
 for _, lsp in ipairs(servers) do
-	require("lspconfig")[lsp].setup(default_config)
+    vim.lsp.config(lsp,default_config)
 end
-require("lspconfig")["pyright"].setup({
+vim.lsp.config("pyright",{
 	on_attach = on_attach,
 	capabilities = capabilites,
 	flags = {
