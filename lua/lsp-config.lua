@@ -21,10 +21,10 @@ local servers = {
 	"tflint",
 	"ts_ls",
 	"gopls",
-	"ltex",
 	"marksman",
 	"ruff",
 	"solargraph",
+	"basedpyright",
 }
 local on_attach = function(client, bufnr)
 	require("lsp-format").on_attach(client)
@@ -57,25 +57,12 @@ end
 local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 local default_config = {
 	on_attach = on_attach,
-	capabilities = capabilites,
+	capabilities = capabilities,
 	flags = {
 		debounce_text_change = 150,
 	},
 }
 
 for _, lsp in ipairs(servers) do
-    vim.lsp.config(lsp,default_config)
+	vim.lsp.config(lsp, default_config)
 end
-vim.lsp.config("pyright",{
-	on_attach = on_attach,
-	capabilities = capabilites,
-	flags = {
-		debounce_text_change = 150,
-	},
-	root_dir = require("lspconfig").util.root_pattern("pyproject.toml", "requirements.txt", ".venv"),
-	settings = {
-		python = {
-			venvPath = ".venv",
-		},
-	},
-})
